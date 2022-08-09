@@ -31,6 +31,7 @@ data class Message(val id: Int, val title: String, val description: String)
 @Composable
 fun MyCompose(msg: String) {
     var list = ArrayList<Message>()
+
     list.add(Message(1, "ahssan", "goodboy"))
     list.add(Message(2, "ahssan", "goodboy"))
     list.add(Message(1, "ahssan", "goodboy"))
