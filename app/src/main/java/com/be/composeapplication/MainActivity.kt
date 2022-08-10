@@ -42,7 +42,12 @@ class MainActivity : ComponentActivity() {
 fun MyCompose(msg: String) {
     showPreview(msg)
 }
-
+@Preview(name = "Light Mode")
+@Preview(
+    uiMode = Configuration.UI_MODE_NIGHT_YES,
+    showBackground = true,
+    name = "Dark Mode"
+)
 @Composable
 fun showPreview(msg: String) {
     val context = LocalContext.current
