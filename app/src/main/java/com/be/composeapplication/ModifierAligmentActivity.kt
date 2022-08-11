@@ -4,10 +4,7 @@ import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.foundation.background
-import androidx.compose.foundation.layout.Arrangement
-import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.foundation.layout.size
+import androidx.compose.foundation.layout.*
 import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Surface
 import androidx.compose.material.Text
@@ -37,13 +34,11 @@ class ModifierAligmentActivity : ComponentActivity() {
 
 @Composable
 fun Greeting(name: String) {
-    Column(modifier = Modifier.background(Color.Yellow).fillMaxSize(),
+    Column(modifier = Modifier.background(Color.Yellow).requiredWidth(1000.dp).padding(100.dp)
 
-         horizontalAlignment = Alignment.CenterHorizontally,
-         verticalArrangement = Arrangement.SpaceBetween
         ) {
-        for(i in 1..10)
-            Text(text = "Hello $name!")
+            Text(text = "Hello $name!", modifier = Modifier.offset(10.dp,10.dp))
+            Text(text = "welcome $name!")
     }
 
 }
